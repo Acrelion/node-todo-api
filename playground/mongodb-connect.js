@@ -1,4 +1,19 @@
-const MongoClient = require('mongodb').MongoClient;
+/*
+cd 'D:\Games\Additional Big Apps\mongo\bin'
+.\mongod.exe --dbpath 'D:\Games\Additional Big Apps\mongo-data'
+*/
+
+//const MongoClient = require('mongodb').MongoClient;
+const { //stupid beautifier
+    MongoClient,
+    ObjectID
+} = require('mongodb');
+
+/*Example of creating an objectId:
+var obj = new ObjectID();
+console.log(obj);
+Still, we don't need to do that. MongoDB will do that for us.
+*/
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if (err) {
